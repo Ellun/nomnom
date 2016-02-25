@@ -1,0 +1,14 @@
+.navContainer {
+  width: 100%;
+  background-color: black;
+  height: 50px;
+}
+.nav{
+  list-style-type: none;
+  font-size: 40px;
+  color: white;
+  text: bold;
+  display: inline-block;
+  position: relative;
+  border: 1px solid green;
+}
