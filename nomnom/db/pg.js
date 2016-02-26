@@ -1,8 +1,11 @@
 var pg                = require('pg');
-var connectionString  = "postgres://elton912:Charmander004@localhost/sessions_test";
 var bcrypt            = require('bcrypt');
 var salt              = bcrypt.genSaltSync(10);
 var session           = require('express-session');
+var pgSession         = require('connect-pg-simple')(session);
+var dotenv            = require('dotenv');
+var connectionString  = "postgres://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@localhost/account_info";
+var request           = require('request');
 
 function loginUser(req, res, next) {
   var email = req.body.email;
