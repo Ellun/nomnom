@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head %>
+  <% include ../partials/logout %>
+</head>
+<header>
+    <% include ../partials/nav %>
+</header>
+<body>
+    <% include ../partials/search %>
+    <ul>
+      <% for (var i = 0; i < Object.keys(data).length; i++) { %>
+      <p>
+        <div class="card">
+          <li class="card"> <%= 'Brand: ' + JSON.stringify(data[i].fields.brand_name) %> </li>
+          <li class="card"> <%= 'Item: ' + JSON.stringify(data[i].fields.item_name) %> </li>
+          <li class="card"> <%= 'Calories: ' + JSON.stringify(data[i].fields.nf_calories) %> </li>
+          <li class="card"> <%= 'Serving Size: ' + JSON.stringify(data[i].fields.nf_serving_size_qty) %> </li>
+          <form action="./" method"post">
+            <button>ADD</button>
+          </form>
+        </div>
+      </p>
+      <% } %>
+    </ul>
+</body>
+</html>
