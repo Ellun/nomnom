@@ -9,7 +9,7 @@ var request           = require('request');
 if(process.env.ENVIRONMENT === 'production') {
   var connectionString = process.env.DATABASE_URL;
 } else {
-    var connectionString  = "postgres://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@" + process.env.DB_HOST + "/account_info";
+  var connectionString  = "postgres://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@" + process.env.DB_HOST + "/account_info";
 }
 
 function loginUser(req, res, next) {
@@ -25,6 +25,7 @@ function loginUser(req, res, next) {
     var query = client.query("SELECT * FROM users WHERE email LIKE ($1);", [email], function(err, result) {
       done();
       if (err) {
+        res.sendStatus(500);
         return console.error('error running query', err)
       }
       if (result.rows.length === 0) {
