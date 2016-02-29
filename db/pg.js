@@ -9,7 +9,7 @@ var request           = require('request');
 if(process.env.ENVIRONMENT === 'production') {
   var connectionString = process.env.DATABASE_URL;
 } else {
-  var connectionString  = "postgres://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@localhost/account_info";
+    var connectionString  = "postgres://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@" + process.env.DB_HOST + "/account_info";
 }
 
 function loginUser(req, res, next) {
