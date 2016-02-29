@@ -11,12 +11,17 @@ var pg               = require('pg');
 var session          = require('express-session');
 var pgSession        = require('connect-pg-simple')(session);
 var dotenv           = require('dotenv');
-var connectionString = "postgres://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@localhost/account_info";
 var request          = require('request');
 var path             = require('path');
 var methodOverride   = require('method-override');
 var db               = require('./db/pg');
 var nutMath          = require('./JS/calMath');
+
+if(process.env.ENVIRONMENT === 'production') {
+  var connectionString = process.env.DATABASE_URL;
+} else {
+  var connectionString  = "postgres://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@localhost/account_info";
+}
 
 var app = express();
 var port = process.env.PORT || 3000; //sets port numbers

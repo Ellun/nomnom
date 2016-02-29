@@ -4,8 +4,13 @@ var salt              = bcrypt.genSaltSync(10); //colin's encryption
 var session           = require('express-session');
 var pgSession         = require('connect-pg-simple')(session);
 var dotenv            = require('dotenv');
-var connectionString  = "postgres://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@localhost/account_info";
 var request           = require('request');
+
+if(process.env.ENVIRONMENT === 'production') {
+  var connectionString = process.env.DATABASE_URL;
+} else {
+  var connectionString  = "postgres://" + process.env.DB_USER + ":" + process.env.DB_PASS + "@localhost/account_info";
+}
 
 function loginUser(req, res, next) {
   var email = req.body.email;
