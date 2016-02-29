@@ -1,0 +1,13 @@
+
+  <div  class="navContainer">
+    <ul class="navbar">
+      <li class="nav"><a href="/profile/<%= id %>" style="text-decoration:none">Profile</a></li>
+      <li class="nav"><a href='/profile/<%= id %>/food' style="text-decoration:none">Food Search</a></li>
+      <li class="nav"><a href='/profile/<%= id %>/programs/edit' style="text-decoration:none">Programs</a></li>
+      <div class="nav">
+        <form method="post" action="/profile/logout?_method=DELETE">
+          <button id="logoutButton">logout</button>
+        </form>
+      </div>
+    </ul>
+  </div>
