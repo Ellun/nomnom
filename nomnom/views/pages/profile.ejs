@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
   <% include ../partials/head %>
-  <% include ../partials/logout %>
 </head>
 <header>
     <% include ../partials/nav %>
 </header>
 <body>
+
   <% var sum = 0; %>
   <% for (var i = 0; i < Object.keys(data).length; i++) { %>
   <div class="cardContainer">
@@ -25,6 +25,6 @@
     <div class="cardFooter"></div>
   </div>
   <% } %>
-  <li class="card"> <%= 'Calories: ' + JSON.stringify(Math.floor(answer - sum)) %> </li>
+  <li class="calories"> <%= 'Daily Calories Remaining: ' + JSON.stringify(Math.floor(answer - sum)) %> </li>
 </body>
 </html>
