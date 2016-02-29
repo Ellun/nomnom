@@ -12,15 +12,23 @@
     <ul>
       <% for (var i = 0; i < Object.keys(data).length; i++) { %>
       <p>
-        <div class="card">
+        <div class="cardContainer">
+          <h1 class="cardHeader">Nutrition</h1>
           <li class="card"> <%= 'Brand: ' + JSON.stringify(data[i].fields.brand_name) %> </li>
           <li class="card"> <%= 'Item: ' + JSON.stringify(data[i].fields.item_name) %> </li>
           <li class="card"> <%= 'Calories: ' + JSON.stringify(data[i].fields.nf_calories) %> </li>
           <li class="card"> <%= 'Serving Size: ' + JSON.stringify(data[i].fields.nf_serving_size_qty) %> </li>
-          <form action="./" method"post">
-            <button>ADD</button>
-          </form>
-        </div>
+        <form action="/profile/<%= id %>/food/search" method="post">
+          <div class="card">
+            <input type="hidden" name="name" value="<%= data[i].fields.item_name %> ">
+            <input type="hidden" name="brand_name" value="<%= data[i].fields.brand_name %> ">
+            <input type="hidden" name="cal" value="<%= data[i].fields.nf_calories %> ">
+            <input type="hidden" name="serving" value="<%= data[i].fields.nf_serving_size_qty %> ">
+            <input type="submit" value="ADD">
+            <div class="cardFooter"></div>
+          </div>
+        </form>
+      </div>
       </p>
       <% } %>
     </ul>

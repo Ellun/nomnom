@@ -1,6 +1,6 @@
 .navContainer {
   width: 100%;
-  background-color: black;
+  background-color: #00FF99;
   height: 50px;
 }
 .nav{
@@ -10,5 +10,32 @@
   text: bold;
   display: inline-block;
   position: relative;
-  border: 1px solid green;
+  padding-right:19px;
+}
+
+.searchBar {
+  display:table;
+  margin: 0 auto;
+}
+
+.searchBarHeader {
+  display:table;
+  margin: 0 auto;
+}
+
+.cardContainer {
+  list-style-type: none;
+  font-family: monospace;
+  width: 200px;
+  border-style: solid;
+  border-color: black;
+}
+
+.cardHeader {
+  background-color: #00FF99;
+}
+.cardFooter {
+  background-color: #00FF99;
+  height: 10px;
+  width: 200px;
 }

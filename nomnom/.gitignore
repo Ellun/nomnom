@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 .env
 
 node_modules
 
 .DS_Store
-=======
-node_modules
 
-.env
->>>>>>> e4db1d9... hide files

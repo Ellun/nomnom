@@ -2,12 +2,29 @@
 <html lang="en">
 <head>
   <% include ../partials/head %>
-  <% include ../partials/logout %>  
+  <% include ../partials/logout %>
 </head>
 <header>
     <% include ../partials/nav %>
 </header>
 <body>
-
+  <% var sum = 0; %>
+  <% for (var i = 0; i < Object.keys(data).length; i++) { %>
+  <div class="cardContainer">
+    <h1 class="cardHeader">Nutrition</h1>
+    <li class="card"> <%= 'Food: ' + JSON.stringify(data[i].name) %> </li>
+    <li class="card"> <%= 'Brand: ' + JSON.stringify(data[i].brand_name) %> </li>
+    <li class="card"> <%= 'Calories: ' + JSON.stringify(data[i].calories) %> </li>
+    <div >
+      <form method="post" action="/profile/<%= id %>?_method=DELETE">
+        <input type="hidden" name="id" value="<%= data[i].id %>">
+        <input type="submit" value="Remove">
+      </form>
+    </div>
+    <% sum = sum + parseInt(JSON.stringify(data[i].calories)) %>
+    <div class="cardFooter"></div>
+  </div>
+  <% } %>
+  <li class="card"> <%= 'Calories: ' + JSON.stringify(Math.floor(answer - sum)) %> </li>
 </body>
 </html>

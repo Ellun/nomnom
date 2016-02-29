@@ -1,0 +1,61 @@
+<form action="/profile/<%= id %>/programs"method="post">
+<!-- Fitness -->
+  <div class="form-group">
+    <label class="health" for="sex">Sex</label>
+    <div class="sex">
+      <select id="sex" name="sex" class="sex">
+        <option value=1>Male</option>
+        <option value=2>Female</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="health" for="weight">Current Weight: lbs</label>
+    <div class="weight">
+      <input type="INT" name="weight">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="health" for="gWeight">Goal Weight: lbs</label>
+    <div class="gWeight">
+      <input type="INT" name="gWeight">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="health" for="height">Height: inches</label>
+    <div class="height">
+      <input type="INT" name="height">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="health" for="age">Age: years</label>
+    <div class="age">
+      <input type="INT" name="age">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="health" for="deadline">Goal Time: days</label>
+    <div class="deadline">
+      <input type="INT" name="deadline">
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="health" for="activity">Daily Activity</label>
+    <div class="activity">
+      <select id="activity" name="activity" class="activity">
+        <option value=1>Desk Job</option>
+        <option value=2>Exercise 1-3 days a week</option>
+        <option value=3>Exercise 3-5 days a week</option>
+        <option value=4>Exercise 6-7 days a week</option>
+      </select>
+    </div>
+  </div>
+  <input type="submit" value="submit">
+
+</form>
