@@ -1,0 +1,112 @@
+.navContainer {
+  width: 100%;
+  background-color: #00FF99;
+  height: 50px;
+}
+.nav{
+  list-style-type: none;
+  font-size: 40px;
+  color: #00C475;
+  text: bold;
+  display: inline-block;
+  position: relative;
+  padding-right:19px;
+}
+
+.searchBar {
+  display:table;
+  margin: 0 auto;
+}
+
+.searchBarHeader {
+  display:table;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.cardContainer {
+  list-style-type: none;
+  font-family: monospace;
+  width: 400px;
+  border-style: solid;
+  border-color: black;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.cardHeader {
+  background-color: #00FF99;
+}
+.cardFooter {
+  background-color: #00FF99;
+  height: 10px;
+  width: 400px;
+}
+
+.addedFood {
+  display: inline;
+}
+
+.card {
+  list-style-type: none;
+  font-style: oblique;
+}
+
+.calories {
+  list-style-type: none;
+  font-family: monospace;
+  width: 400px;
+  border-style: solid;
+  border-color: black;
+  margin: 0 auto;
+}
+
+#logoutButton {
+  display: inline-block;
+ text-align: center;
+ border: 0px;
+ background-color: transparent;
+ text-decoration: none;
+ white-space: nowrap;
+ cursor: pointer;
+ box-sizing: border-box;
+}
+
+.programContainer {
+  background-color: #00C475;
+  width: 300px;
+  margin-top: 260px;
+  margin-left: 40px;
+  border-style: solid;
+  border-color: black;
+}
+
+.programContainerEdit {
+  background-color: #00C475;
+  width: 300px;
+  margin-top: 220px;
+  margin-left: 40px;
+  border-style: solid;
+  border-color: black;
+}
+
+.programInfo {
+  width: 400px;
+  float: left;
+  margin-left: 40px;
+  margin-top: 40px;
+  border-style: solid;
+  border-color: black;
+}
+.programInfo h1{
+  background-color: #00C475;
+}
+
+.programInfo p {
+ text-align: left;
+}
+
+.home {
+  margin-left: 40px;
+  width: 400px;
+}
