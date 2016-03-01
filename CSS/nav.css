@@ -105,3 +105,8 @@
 .programInfo p {
  text-align: left;
 }
+
+.home {
+  margin-left: 40px;
+  width: 400px;
+}
